@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Your Balance",
+    "icon": "IoWallet",
+    "iconColor": "text-[#DBDAEC]",
+    "iconBg": "border-gray-500",
+    "arrowBg": "bg-[#3F7CA2]",
+    "arrowColor": "text-green-400",
+    "percentage": "15%",
+    "desc": "compared with the last month",
+    "price": "$ 28,891.138",
+    "bgColor": "bg-[#4644A4]",
+    "textColor": "text-white",
+    "borderColor": ""
+  },
+  {
+    "title": "Savings",
+    "icon": "IoBookmarks",
+    "iconColor": "text-green-400",
+    "iconBg": "border-gray-300",
+    "arrowBg": "bg-[#EEA4B7]",
+    "arrowColor": "text-red-700",
+    "percentage": "15%",
+    "desc": "compared with the last month",
+    "price": "$ 28,891.138",
+    "bgColor": "bg-white",
+    "textColor": "text-gray-800",
+    "borderColor": "border border-gray-300"
+  },
+  {
+    "title": "Expenses",
+    "icon": "GiExpense",
+    "iconColor": "text-yellow-400",
+    "iconBg": "border-gray-300",
+    "arrowBg": "bg-[#FCE3AD]",
+    "arrowColor": "text-yellow-700",
+    "percentage": "15%",
+    "desc": "compared with the last month",
+    "price": "$ 28,891.138",
+    "bgColor": "bg-white",
+    "textColor": "text-gray-800",
+    "borderColor": "border border-gray-300"
+  },
+  {
+    "title": "Income",
+    "icon": "SiMoneygram",
+    "iconColor": "text-blue-400",
+    "iconBg": "border-gray-300",
+    "arrowBg": "bg-[#A3C9F4]",
+    "arrowColor": "text-blue-700",
+    "percentage": "15%",
+    "desc": "compared with the last month",
+    "price": "$ 28,891.138",
+    "bgColor": "bg-white",
+    "textColor": "text-gray-800",
+    "borderColor": "border border-gray-300"
+  }
+]

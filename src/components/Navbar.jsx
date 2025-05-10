@@ -1,26 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Search } from 'react-iconly';
 import { BsChatLeftDots } from 'react-icons/bs';
 import { CiSearch } from 'react-icons/ci';
 import { FaAngleDown } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { GoBell } from 'react-icons/go';
 import { IoIosArrowDown } from 'react-icons/io';
 import { LuMessageSquareText } from 'react-icons/lu';
+import { useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
-  return (
-    <div className='bg-[#F7F7FB] font-jakarta'>
-      <div className='flex gap-4'>
-        <label htmlFor="" className='bg-white p-2 flex gap-2 w-[75%] items-center  rounded-full shadow-xs '>
+const Navbar = ({displaySidebar,setDisplaySidebar}) => {
+const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate('/login');
+  };  return (
+    <div className='bg-[#F7F7FB] w-full lg:px-10 lg:py-8 p-4 font-jakarta'>
+      <div className='lg:flex gap-4 w-full '>
+        <div className='flex gap-4 lg:w-[70%]'>
+                 <div onClick={()=> {setDisplaySidebar(!displaySidebar)}} className='border  lg:hidden flex items-center bg-white border-gray-300 rounded-full py-2 px-4'>
+    <GiHamburgerMenu  />
+
+            </div>
+        <label htmlFor="" className='bg-white p-2 flex gap-2 w-full items-center  rounded-full shadow-xs '>
         <CiSearch  className='text-lg'/>
         <input type="text" placeholder='Search here....' className='focus:outline-none w-full placeholder:text-sm' />
         </label>
-        <div className='bg-white rounded-full p-2 w-[25%]  shadow-xs flex gap-3 items-center'>
-            <div className='border border-gray-300 rounded-full py-2 px-4'>
+
+        </div>
+        <div className='bg-white rounded-full p-2 lg:w-[30%]  shadow-xs  mt-4 lg:mt-0  flex  gap-3 items-center'>
+            <div className='border border-gray-300 rounded-full py-2 px-3'>
                 <GoBell />
 
             </div>
-            <div className='border border-gray-300 rounded-full py-2 px-4'>
+            <div className='border border-gray-300 rounded-full py-2 px-3'>
                 <BsChatLeftDots   />
 
             </div>
@@ -31,12 +45,26 @@ const Navbar = () => {
                     <path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.19C2 17.28 2.19 18.23 2.56 19.03C3.42 20.93 5.26 22 7.81 22H16.19C19.83 22 22 19.83 22 16.19V13.9V7.81C22 4.17 19.83 2 16.19 2ZM20.37 12.5C19.59 11.83 18.33 11.83 17.55 12.5L13.39 16.07C12.61 16.74 11.35 16.74 10.57 16.07L10.23 15.79C9.52 15.17 8.39 15.11 7.59 15.65L3.85 18.16C3.63 17.6 3.5 16.95 3.5 16.19V7.81C3.5 4.99 4.99 3.5 7.81 3.5H16.19C19.01 3.5 20.5 4.99 20.5 7.81V12.61L20.37 12.5Z" fill="#292D32" />
                 </svg>
             </div>
-            <div className='flex items-center gap-2'>
-           <h2 className='text-nowrap text-sm'>Pranish bista</h2>
-           <IoIosArrowDown className='text-xl'  />
+  <div className='relative'>
+      <div
+        onClick={() => setShowDropdown(!showDropdown)}
+        className='flex items-center w-full gap-2 cursor-pointer'
+      >
+        <h2 className='text-nowrap text-sm'>Pranish bista</h2>
+        <IoIosArrowDown className='text-xl' />
+      </div>
 
-
-            </div>
+      {showDropdown && (
+        <div className='absolute right-0 mt-2 bg-white border border-gray-300 shadow-md rounded-md p-2 w-32 z-50'>
+          <button
+            onClick={handleLogout}
+            className='w-full text-left text-sm hover:bg-gray-100 px-2 py-1'
+          >
+            Logout
+          </button>
+        </div>
+      )}
+    </div>
         </div>
 
       </div>

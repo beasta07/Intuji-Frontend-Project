@@ -41,7 +41,7 @@ const Overview = () => {
   return (
     <div className='bg-white font-jakarta rounded-lg p-4'>
       <h1 className='font-bold'>Overview</h1>
-      <div className='grid grid-cols-2 gap-5 mt-4'>
+      <div className='grid lg:grid-cols-2 gap-5 my-4'>
         {cards.map((card) => (
           <div
             key={card.title}

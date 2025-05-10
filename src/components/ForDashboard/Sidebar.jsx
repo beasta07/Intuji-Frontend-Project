@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Sidebar = ({displaySidebar,setDisplaySidebar}) => {
   const [activeState, setActiveState] = useState('Dashboard');
   const menuItems = [
-    { label: 'Dashboard', icon: <img src="/public/images/Sidebar/element-4.png" alt="dashboard" /> },
+    { label: 'Dashboard', icon: <img src="/images/Sidebar/element-4.png" alt="dashboard" /> },
     { label: 'Schedule', icon: <Calendar set="two-tone" primaryColor="gray" secondaryColor="gray" size="medium" /> },
     { label: 'Message', icon: <Message set="two-tone" primaryColor="gray" secondaryColor="gray" size="medium" /> },
     { label: 'Analytics', icon: <Chart set="two-tone" primaryColor="gray" secondaryColor="gray" size="medium" /> },

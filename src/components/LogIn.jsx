@@ -32,7 +32,7 @@ navigate("/");    },
   return (
     <>
       <div className="flex font-jakarta items-center justify-center min-h-[100vh] bg-[#EDF2F9]">
-        <div className="flex flex-col lg:flex-row w-[90%] lg:w-[55%] mx-auto shadow-lg border border-gray-300 rounded-lg relative z-20">
+        <div className="flex flex-col md:flex-row w-[90%] lg:w-[55%] lg:h-[25rem] mx-auto shadow-lg border border-gray-300 rounded-lg relative z-20">
           <div className="flex-1 bg-[#1F7EFE] flex flex-col gap-4 justify-center items-center text-white p-9 text-center relative overflow-hidden rounded-t-md lg:rounded-l-lg z-10">
             <div className="flex justify-center lg:text-4xl text-2xl text-white gap-3 items-center">
               <IoStatsChart className="lg:text-5xl " />
